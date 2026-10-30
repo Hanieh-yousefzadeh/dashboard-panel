@@ -11,6 +11,7 @@ import LanguageSwitch from "@/components/lang-switch"
 import { useLocale, useTranslations } from "next-intl"
 import { navigation } from "@/data/navigation"
 import { Link, usePathname } from "@/i18n/nav"
+import { Spinner } from "./ui/spinner"
 
 
 
@@ -33,7 +34,11 @@ export default function Header() {
 
 
     if (!mounted) {
-        return <p className="sm:p-8">Loading...</p>;
+         return (
+            <div className="flex min-h-screen items-center justify-center">
+                <Spinner className="size-10 text-purple-600" />
+            </div>
+        )
     }
 
     function handleLogout() {

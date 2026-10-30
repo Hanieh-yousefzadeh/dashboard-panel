@@ -1,8 +1,11 @@
-import LoginPage from "@/components/loginpage";
+import LoginPage from "@/components/loginpage"
+import AuthGuard from "@/guards/authgaurd";
 
 
 export default function Home() {
   return (
-    <LoginPage/>
+    <AuthGuard type="guest">
+      <LoginPage />
+    </AuthGuard>
   );
 }

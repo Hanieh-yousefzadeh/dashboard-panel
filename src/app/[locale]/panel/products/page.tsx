@@ -172,7 +172,7 @@ export default function ProductsPage() {
     } as const
 
     return (
-        <div className={`p-5 ${locale === "fa" ? "xl:pr-8" : "xl:pl-8"}  xl:w-316 md:w-3xl w-80 overflow-x-atuo`}>
+        <div className={`p-5 ${locale === "fa" ? "xl:pr-8" : "xl:pl-8"}  xl:w-full md:w-3xl w-80 overflow-x-atuo`}>
             <div className="pb-12 flex items-center justify-between">
                 <div className="flex flex-col gap-3">
                     <h1 className="sm:text-2xl font-bold"> {t("title")}</h1>
@@ -257,7 +257,7 @@ export default function ProductsPage() {
                                 <TableHead className={`font-semibold text-[#5409cd] dark:text-[#bd8efb] ${locale === "fa" ? "text-right" : "text-left"}`}> {t("product")} </TableHead>
                                 <TableHead className={`font-semibold text-[#5409cd] dark:text-[#bd8efb] ${locale === "fa" ? "text-right" : "text-left"}`}> {t("category")}  </TableHead>
                                 <TableHead className={`font-semibold text-[#5409cd] dark:text-[#bd8efb] ${locale === "fa" ? "text-center pl-7" : "text-left"}`}> {t("price")} </TableHead>
-                                <TableHead className={`font-semibold text-[#5409cd] dark:text-[#bd8efb] ${locale === "fa" ? "text-center pl-5" : "text-left"}`}> {t("stock")} </TableHead>
+                                <TableHead className={`font-semibold text-[#5409cd] dark:text-[#bd8efb] ${locale === "fa" ? "text-center pl-5" : "text-left pr-2"}`}> {t("stock")} </TableHead>
                                 <TableHead className={`font-semibold text-[#5409cd] dark:text-[#bd8efb] ${locale === "fa" ? "text-center pl-10" : "text-left"}`}> {t("actions")} </TableHead>
                             </TableRow>
                         </TableHeader>
@@ -281,8 +281,8 @@ export default function ProductsPage() {
                                                 tCategories(categoryTranslationKeys[category.name as keyof typeof categoryTranslationKeys])
                                                 : "-"}
                                         </TableCell>
-                                        <TableCell className={`${locale === "fa" ? "pr-10 pl-6" : "pr-28"}`}>  ${product.price} </TableCell>
-                                        <TableCell className={`${locale === "fa" ? "pr-8 pl-8" : "pr-28"}`}> {product.stock}</TableCell>
+                                        <TableCell className={`${locale === "fa" ? "pr-10 pl-6" : "pr-25"}`}>  ${product.price} </TableCell>
+                                        <TableCell className={`${locale === "fa" ? "pr-8 pl-8" : "pr-23"}`}> {product.stock}</TableCell>
 
                                         <TableCell>
                                             <div className={`flex items-center justify-center gap-3 ${locale === "fa" ? "pl-5" : "pr-8"}`}>

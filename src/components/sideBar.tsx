@@ -7,6 +7,7 @@ import { useSelector } from "react-redux"
 import { CircleUserRound } from "lucide-react"
 import { Link, usePathname } from "@/i18n/nav"
 import { useTranslations , useLocale} from "next-intl"
+import { Spinner } from "./ui/spinner"
 
 
 
@@ -23,7 +24,11 @@ export default function SideBar() {
 
 
     if (!mounted) {
-        return <p className="p-8">Loading...</p>;
+        return (
+            <div className="flex min-h-screen items-center justify-center">
+                <Spinner className="size-10 text-purple-600" />
+            </div>
+        )
     }
 
     if (!user) {

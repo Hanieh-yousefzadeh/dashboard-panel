@@ -105,7 +105,7 @@ export default function OrdersPage() {
                             <select
                                 value={filter}
                                 onChange={(e) => setFilter(e.target.value)}
-                                className={` ${locale === "fa" ? "border-l-transparent border-l-6 outline " : " border-r-4 border-r-transparent  outline "}rounded-md p-2  outline-[#7a3ffa3f] dark:bg-[#3b0b87]`}
+                                className={` ${locale === "fa" ? "border-l-transparent border-l-6 " : " border-r-4 border-r-transparent  "} outline  rounded-md p-2  outline-[#7a3ffa3f] dark:bg-[#3b0b87]`}
                             >
                                 <option value="all">{t("allOrders")}</option>
                                 <option value="pending">{t("pending")}</option>
@@ -150,7 +150,7 @@ export default function OrdersPage() {
                                                             id: order.id,
                                                             status: e.target.value as OrderStatus,
                                                         })
-                                                        )} className={` ${locale === "fa" ? "border-l-transparent border-l-5 outline " : " border-r-4 border-r-transparent  outline"}outline-[#7a3ffa3f] rounded-md  p-2  dark:bg-[#1D124B] dark:outline-[#7a3ffa4d]`}>
+                                                        )} className={` ${locale === "fa" ? "border-l-transparent border-l-5" : "border-r-4 border-r-transparent"} outline outline-[#7a3ffa3f] rounded-md  p-2  dark:bg-[#1D124B] dark:outline-[#7a3ffa4d]`}>
                                                         <option value="pending">{t("pending")}</option>
                                                         <option value="delivered">{t("delivered")}</option>
                                                         <option value="cancelled">{t("cancelled")}</option>

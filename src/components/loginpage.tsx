@@ -1,11 +1,10 @@
 "use client"
 
 import { useTranslations } from "next-intl"
-import { useLocale } from "next-intl"
 import { mockUsers } from "@/data/mock-users"
 import { dispatchType } from "@/lib/store"
 import { login } from "@/redux/authSlice"
-import { useRouter } from "next/navigation"
+import { useRouter } from "@/i18n/nav"
 import { useState } from "react"
 import { LockKeyhole, Mail } from "lucide-react"
 import { useDispatch } from "react-redux"
@@ -26,7 +25,6 @@ export default function LoginPage() {
     const [error, setError] = useState("")
 
     const t = useTranslations("Login")
-    const locale = useLocale()
 
     function handleSubmit(e: React.SubmitEvent<HTMLFormElement>) {
         e.preventDefault()
@@ -47,7 +45,7 @@ export default function LoginPage() {
             role: currentUser.role
         }))
 
-        router.replace(`/${locale}/panel`)
+        router.replace("/panel")
     }
 
     return (
