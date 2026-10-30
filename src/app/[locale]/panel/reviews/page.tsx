@@ -75,9 +75,9 @@ export default function MyOpinionsPage() {
                     if (!isOpen) setEditingOpinion(null)
                 }}
             >
-                <DialogContent className="border-[#7a3ffa1a] text-[#5409cd] dark:text-[#dbc8f9] dark:border-[#b392fbab]   dark:bg-[#0a0220]">
+                <DialogContent className="border-[#7a3ffa1a] text-[#051164] dark:text-[#dbc8f9] dark:border-[#b392fbab]   dark:bg-[#0a0220]">
                     <DialogHeader>
-                        <DialogTitle className="font-bold text-[#5409cd] dark:text-[#d1ccd5]"> {t("editTitle")} </DialogTitle>
+                        <DialogTitle className="font-bold text-[#051164] dark:text-[#d1ccd5]"> {t("editTitle")} </DialogTitle>
                     </DialogHeader>
 
                     <form onSubmit={handleEditSubmit} className="flex flex-col gap-7 pt-5 dark:text-[#d1ccd5]">
@@ -89,10 +89,10 @@ export default function MyOpinionsPage() {
                                 onChange={handleMessageChange}
                                 placeholder={t("messagePlaceholder")}
                                 required
-                                className="min-h-28 border-[#7a3ffa1a] text-[#1e0547] focus-visible:ring-0 dark:placeholder:text-[#b098d6bd] dark:text-[#bea2eba1]"
+                                className="min-h-28 border-[#7a3ffa1a] text-[#051264d2] focus-visible:ring-0 dark:placeholder:text-[#b098d6bd] dark:text-[#bea2eba1]"
                             />
                         </div>
-                        <Button type="submit" className="mt-3 w-full bg-[#7a3ffacb] py-5 hover:bg-[#5409cd]  dark:text-[#d1ccd5] dark:bg-[#3b0b87]">
+                        <Button type="submit" className="mt-3 w-full py-5 bg-[#e1d4fe51] border-2  hover:border-[#5409cddb] border-[#b88ffa31] text-[#3b0b87] dark:bg-[#3b0b87] hover:text-white hover:bg-[#5409cddb] dark:text-[#d1ccd5]">
                             {t("saveChanges")}
                         </Button>
                     </form>
@@ -131,7 +131,7 @@ export default function MyOpinionsPage() {
 
                                 <TableCell><div className={`line-clamp-1 ${locale === "fa" ? "pr-15" : "pl-10"}`}> {opinion.message === "The product quality was good." ? t("goodQualityMessage") : t("printedVersionQuestion")}</div></TableCell>
 
-                                <TableCell><div className={`rounded-lg text-center py-2 px-1.5 text-sm font-semibold ${opinion.status === "Answered" ? "bg-green-50 text-green-700 dark:bg-[#dbfce7a3] dark:text-green-900" : "bg-[#ede8fd] dark:bg-[#f1ebfeac] text-[#031481bd]"}`}>
+                                <TableCell><div className={`rounded-lg text-center py-2 px-1.5 text-sm font-semibold ${opinion.status === "Answered" ? "bg-green-50 text-green-700 dark:bg-[#dbfce7a3] dark:text-green-900" : "bg-[#ede8fd] dark:bg-[#f1ebfeac] text-[#5909CD]"}`}>
                                     {opinion.status === "Answered" ? t("answered") : t("pending")}
                                 </div>
                                 </TableCell>

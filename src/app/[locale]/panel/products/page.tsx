@@ -172,32 +172,32 @@ export default function ProductsPage() {
     } as const
 
     return (
-        <div className={`p-5 ${locale === "fa" ? "xl:pr-8" : "xl:pl-8"}  xl:w-full md:w-3xl w-80 overflow-x-atuo`}>
-            <div className="pb-12 flex items-center justify-between">
+        <div className={`p-5 ${locale === "fa" ? "xl:pr-8" : "xl:pl-8"}  xl:w-316 md:w-3xl w-80 overflow-x-atuo`}>
+            <div className="pb-12 flex items-start justify-between">
                 <div className="flex flex-col gap-3">
                     <h1 className="sm:text-2xl font-bold"> {t("title")}</h1>
                     <p className="text-base text-[#7B29FB] dark:text-[#decaf9]"> {t("totalProducts", { count: mounted ? products.length : "..." })} </p>
                 </div>
                 <Dialog open={open} onOpenChange={setOpen}>
-                    <DialogTrigger render={<Button className="text-base bg-[#7a3ffacb] py-4.5 pr-3.5 hover:bg-[#5409cd] dark:hover:text-[#d1ccd5] dark:bg-[#261666] dark:text-[#d1ccd5]  cursor-pointer">
+                    <DialogTrigger render={<Button className="text-base  bg-[#8C29FB] py-5  pr-3.5 hover:bg-[#5409cd] dark:hover:text-[#d1ccd5] dark:bg-[#261666] dark:text-[#d1ccd5]  cursor-pointer">
                         <Plus strokeWidth={3} /> {t("addProduct")} </Button>} />
-                    <DialogContent className="border-[#7a3ffa1a] text-[#5409cd] dark:text-[#dbc8f9] dark:border-[#b392fbab]   dark:bg-[#0a0220]">
+                    <DialogContent className="border-[#7a3ffa1a] text-[#051164]] dark:text-[#dbc8f9] dark:border-[#b392fbab]   dark:bg-[#0a0220]">
                         <DialogHeader>
-                            <DialogTitle className="text-[#5409cd] dark:text-[#d1ccd5] font-bold">	{t("addNewProduct")}</DialogTitle>
+                            <DialogTitle className="text-[#051164] dark:text-[#d1ccd5] font-bold">	{t("addNewProduct")}</DialogTitle>
                         </DialogHeader>
-                        <form onSubmit={handleSubmit} className="flex flex-col gap-7 pt-5 dark:text-[#d1ccd5] text-[#6200ff]">
+                        <form onSubmit={handleSubmit} className="flex flex-col gap-7 pt-5 dark:text-[#d1ccd5] text-[#051164]">
                             <div className="flex flex-col gap-2">
                                 <Label>	{t("productName")}</Label>
                                 <Input value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })}
                                     placeholder="Product name"
-                                    required className="border-[#7a3ffa1a] h-10 text-[#4104a2] placeholder:text-[#6315e16e] dark:placeholder:text-[#b098d6bd] dark:text-[#bea2eba1] focus-visible:ring-0"
+                                    required className="border-[#7a3ffa1a] h-10 text-[#051164] placeholder:text-[#05126463] dark:placeholder:text-[#b098d6bd] dark:text-[#bea2eba1] focus-visible:ring-0"
                                 />
                             </div>
 
                             <div className="flex flex-col gap-2">
                                 <Label>	{t("productImage")}</Label>
 
-                                <div className="flex h-10 items-center rounded-md border border-[#7a3ffa1a] dark:placeholder:text-[#b098d6bd] dark:text-[#bea2eba1] dark:bg-[#150D2A] px-3 text-sm text-[#4104a2ba]">
+                                <div className="flex h-10 items-center rounded-md border border-[#7a3ffa1a] dark:placeholder:text-[#b098d6bd] dark:text-[#bea2eba1] dark:bg-[#150D2A] px-3 text-sm text-[#05126463]">
                                     {imageName || t("noFileChosen")}
                                 </div>
 
@@ -207,7 +207,7 @@ export default function ProductsPage() {
                                 />
 
                                 <label htmlFor="productImage"
-                                    className="flex w-fit cursor-pointer items-center rounded-md bg-[#7a3ffa] dark:bg-[#3b0b87]  px-4 py-2 text-white dark:text-[#d1ccd5] hover:bg-[#5409cd]"
+                                    className="flex w-fit cursor-pointer items-center rounded-md bg-[#e1d4fe51] border-2  hover:border-[#5409cddb] border-[#b88ffa31] text-[#3b0b87]  hover:bg-[#5409cd] hover:text-white dark:bg-[#3b0b87]  px-4 py-2 dark:text-[#d1ccd5]"
                                 >
                                     {t("chooseFile")}
                                 </label>
@@ -231,7 +231,7 @@ export default function ProductsPage() {
                                 <Label>	{t("price")}</Label>
                                 <Input type="number" value={form.price} onChange={(e) => setForm({ ...form, price: e.target.value })}
                                     placeholder="Price"
-                                    required className="border-[#7a3ffa1a] h-10 dark:placeholder:text-[#b098d6bd] dark:text-[#bea2eba1] text-[#4104a2] placeholder:text-[#6315e16e] focus-visible:ring-0"
+                                    required className="border-[#7a3ffa1a] h-10 dark:placeholder:text-[#b098d6bd] dark:text-[#bea2eba1] text-[#051164] placeholder:text-[#05126463] focus-visible:ring-0"
                                 />
                             </div>
 
@@ -240,10 +240,10 @@ export default function ProductsPage() {
                                 <Input type="number" value={form.stock}
                                     onChange={(e) => setForm({ ...form, stock: e.target.value })}
                                     placeholder="Stock"
-                                    required className="border-[#7a3ffa1a] h-10 dark:placeholder:text-[#b098d6bd] dark:text-[#bea2eba1]  text-[#4104a2] placeholder:text-[#6315e16e] focus-visible:ring-0"
+                                    required className="border-[#7a3ffa1a] h-10 dark:placeholder:text-[#b098d6bd] dark:text-[#bea2eba1]  text-[#051164] placeholder:text-[#05126463] focus-visible:ring-0"
                                 />
                             </div>
-                            <Button type="submit" className="w-full py-5 mt-3  dark:text-[#d1ccd5] dark:bg-[#3b0b87] bg-[#7a3ffacb] hover:bg-[#5409cd]">	{t("addProduct")}</Button>
+                            <Button type="submit" className="w-full py-5 mt-3  dark:text-[#d1ccd5]  bg-[#e1d4fe51] border-2  hover:border-[#5409cddb] border-[#b88ffa31] text-[#3b0b87] dark:bg-[#3b0b87] hover:bg-[#5409cd] hover:text-white">	{t("addProduct")}</Button>
                         </form>
                     </DialogContent>
                 </Dialog>
@@ -294,9 +294,9 @@ export default function ProductsPage() {
                                                             <PencilSparkles className="size-5" />
                                                         </button>
                                                     } />
-                                                    <DialogContent className="border-[#7a3ffa1a] text-[#5409cd] dark:border-[#b392fbab] dark:text-[#dbc8f9] dark:bg-[#0a0220] ">
+                                                    <DialogContent className="border-[#7a3ffa1a] text-[#051164] dark:border-[#b392fbab] dark:text-[#dbc8f9] dark:bg-[#0a0220] ">
                                                         <DialogHeader>
-                                                            <DialogTitle className="text-[#5409cd] dark:text-[#d1ccd5] font-bold">	{t("editProduct")}</DialogTitle>
+                                                            <DialogTitle className="text-[#051164] dark:text-[#d1ccd5] font-bold">	{t("editProduct")}</DialogTitle>
                                                         </DialogHeader>
 
                                                         <form onSubmit={handleEditSubmit} className="flex flex-col gap-5 pt-5 dark:text-[#d1ccd5]">
@@ -304,7 +304,7 @@ export default function ProductsPage() {
                                                                 <Label>	{t("productName")}</Label>
                                                                 <Input value={editForm.name}
                                                                     onChange={(e) => setEditForm({ ...editForm, name: e.target.value })}
-                                                                    required className="border-[#7a3ffa1a] h-10 text-[#4104a2] dark:placeholder:text-[#a881e6a1] dark:text-[#d7c5f5a1]  placeholder:text-[#6315e16e] focus-visible:ring-0"
+                                                                    required className="border-[#7a3ffa1a] h-10 text-[#051264d2] dark:placeholder:text-[#a881e6a1] dark:text-[#d7c5f5a1]  placeholder:text-[#6315e16e] focus-visible:ring-0"
                                                                 />
                                                             </div>
 
@@ -319,7 +319,7 @@ export default function ProductsPage() {
                                                                         className="size-12 rounded-md object-cover"
                                                                     />
 
-                                                                    <div className="flex h-10 flex-1 items-center rounded-md border dark:placeholder:text-[#b098d6bd] dark:text-[#bea2eba1] dark:bg-[#150D2A] border-[#7a3ffa1a] px-3 text-sm text-[#4104a2]">
+                                                                    <div className="flex h-10 flex-1 items-center rounded-md border dark:placeholder:text-[#b098d6bd] dark:text-[#bea2eba1] dark:bg-[#150D2A] border-[#7a3ffa1a] px-3 text-sm text-[#051264d2]">
                                                                         {imageName || t("currentProductImage")}
                                                                     </div>
                                                                 </div>
@@ -333,7 +333,7 @@ export default function ProductsPage() {
                                                                 />
 
                                                                 <label htmlFor="editProductImage"
-                                                                    className="flex w-fit cursor-pointer items-center h-10 dark:text-[#d1ccd5] dark:bg-[#3b0b87]   rounded-md bg-[#7a3ffa] px-4 py-2 text-white hover:bg-[#5409cd]"
+                                                                    className="flex w-fit cursor-pointer px-4 py-2 items-center h-10  dark:text-[#d1ccd5] rounded-md bg-[#e1d4fe51] border-2  hover:border-[#5409cddb] border-[#b88ffa31] text-[#3b0b87] dark:bg-[#3b0b87] hover:bg-[#5409cd] hover:text-white"
                                                                 >
                                                                     {t("chooseFile")}
                                                                 </label>
@@ -365,7 +365,7 @@ export default function ProductsPage() {
                                                                         price: e.target.value,
                                                                     })
                                                                     }
-                                                                    required className="border-[#7a3ffa1a] h-10 dark:placeholder:text-[#a881e6a1] dark:text-[#d7c5f5a1]  text-[#4104a2] placeholder:text-[#6315e16e] focus-visible:ring-0"
+                                                                    required className="border-[#7a3ffa1a] h-10 dark:placeholder:text-[#a881e6a1] dark:text-[#d7c5f5a1]  text-[#051264d2] placeholder:text-[#6315e16e] focus-visible:ring-0"
                                                                 />
                                                             </div>
 
@@ -377,10 +377,10 @@ export default function ProductsPage() {
                                                                         stock: e.target.value,
                                                                     })
                                                                     }
-                                                                    required className="border-[#7a3ffa1a] h-10 dark:placeholder:text-[#a881e6a1] dark:text-[#d7c5f5a1]  text-[#4104a2] placeholder:text-[#6315e16e] focus-visible:ring-0"
+                                                                    required className="border-[#7a3ffa1a] h-10 dark:placeholder:text-[#a881e6a1] dark:text-[#d7c5f5a1]  text-[#051264d2] placeholder:text-[#6315e16e] focus-visible:ring-0"
                                                                 />
                                                             </div>
-                                                            <Button type="submit" className="w-full py-5 mt-3 dark:text-[#d1ccd5] dark:bg-[#3b0b87] bg-[#7a3ffacb] hover:bg-[#5409cd]"> {t("saveChanges")}  </Button>
+                                                            <Button type="submit" className="w-full py-5 mt-3 dark:text-[#d1ccd5] bg-[#e1d4fe51] border-2  hover:border-[#5409cddb] border-[#b88ffa31] text-[#3b0b87] dark:bg-[#3b0b87] hover:bg-[#5409cd] hover:text-white"> {t("saveChanges")}  </Button>
                                                         </form>
                                                     </DialogContent>
                                                 </Dialog>

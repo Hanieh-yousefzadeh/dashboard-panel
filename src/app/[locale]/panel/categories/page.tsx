@@ -96,16 +96,16 @@ export default function categoryPage() {
                     <p className="text-base text-[#7B29FB] dark:text-[#decaf9]"> {t("totalCategories")}: ({categories.length}) </p>
                 </div>
                 <Dialog open={open} onOpenChange={setOpen}>
-                    <DialogTrigger render={<Button className="text-base bg-[#7a3ffacb] py-4.5  pr-3.5 dark:hover:text-[#d1ccd5] dark:bg-[#261666] dark:text-[#d1ccd5]  hover:bg-[#5409cd] cursor-pointer"><Plus strokeWidth={3} /> {t("addCategory")}</Button>} />
+                    <DialogTrigger render={<Button className="text-base  bg-[#8C29FB] py-5  pr-3.5 dark:hover:text-[#d1ccd5] dark:bg-[#261666] dark:text-[#d1ccd5]  hover:bg-[#5409cd] cursor-pointer"><Plus strokeWidth={3} /> {t("addCategory")}</Button>} />
 
-                    <DialogContent className="border-[#7a3ffa1a] text-[#5409cd] dark:text-[#dbc8f9] dark:border-[#b392fbab]   dark:bg-[#0a0220]">
+                    <DialogContent className="border-[#7a3ffa1a] text-[#051164] dark:text-[#dbc8f9] dark:border-[#b392fbab]   dark:bg-[#0a0220]">
                         <DialogHeader>
-                            <DialogTitle className="text-[#5409cd] dark:text-[#d1ccd5] font-bold">	{t("addNewCategory")}</DialogTitle>
+                            <DialogTitle className="text-[#051164] dark:text-[#d1ccd5] font-bold">	{t("addNewCategory")}</DialogTitle>
                         </DialogHeader>
 
                         <form
                             onSubmit={handleAddCategory}
-                            className=" flex flex-col gap-7 pt-5 text-[#6200ff] dark:text-[#d1ccd5]"
+                            className=" flex flex-col gap-7 pt-5 text-[#051164] dark:text-[#d1ccd5]"
                         >
                             <div className="flex flex-col gap-2">
                                 <Label htmlFor="name">	{t("categoryName")}</Label>
@@ -115,10 +115,10 @@ export default function categoryPage() {
                                     onChange={(e) => setCategory(e.target.value)}
                                     placeholder="Enter category name"
                                     required
-                                    className="border-[#7a3ffa1a] text-[#4104a2] h-10 placeholder:text-[#6315e16e]ark:placeholder:text-[#b098d6bd] dark:text-[#bea2eba1] focus-visible:ring-0"
+                                    className="border-[#7a3ffa1a] text-[#051164] placeholder:text-[#05126463] h-10 dark:placeholder:text-[#b098d6bd] dark:text-[#bea2eba1] focus-visible:ring-0"
                                 />
                             </div>
-                            <Button type="submit" className=" cursor-pointer dark:text-[#d1ccd5] dark:bg-[#3b0b87] w-full py-5 mt-3 bg-[#7a3ffacb] hover:bg-[#5409cd]">{t("addCategory")}</Button>
+                            <Button type="submit" className=" cursor-pointer dark:text-[#d1ccd5]  w-full py-5 mt-3 bg-[#e1d4fe51] border-2  hover:border-[#5409cddb] border-[#b88ffa31] text-[#3b0b87] dark:bg-[#3b0b87] hover:bg-[#5409cd] hover:text-white">{t("addCategory")}</Button>
                         </form>
                     </DialogContent>
                 </Dialog>
@@ -128,9 +128,9 @@ export default function categoryPage() {
                         if (!isOpen) setEditingCategory(null)
                     }}
                 >
-                    <DialogContent className="border-[#7a3ffa1a] text-[#5409cd] dark:border-[#b392fbab] dark:text-[#dbc8f9] dark:bg-[#0a0220]">
+                    <DialogContent className="border-[#7a3ffa1a] text-[#051164] dark:border-[#b392fbab] dark:text-[#dbc8f9] dark:bg-[#0a0220]">
                         <DialogHeader>
-                            <DialogTitle className="text-[#5409cd] dark:text-[#d1ccd5] font-bold">	{t("editCategory")}</DialogTitle>
+                            <DialogTitle className="text-[#051164] dark:text-[#d1ccd5] font-bold">	{t("editCategory")}</DialogTitle>
                         </DialogHeader>
                         <form onSubmit={handleEditSubmit} className="flex flex-col gap-7 pt-5 dark:text-[#d1ccd5]">
                             <div className="flex flex-col gap-2">
@@ -143,10 +143,10 @@ export default function categoryPage() {
                                     }
                                     required
                                     placeholder={t("enterCategoryName")}
-                                    className="border-[#7a3ffa1a] h-10 text-[#4104a2] dark:placeholder:text-[#a881e6a1] dark:text-[#d7c5f5a1] placeholder:text-[#6315e16e] focus-visible:ring-0"
+                                    className="border-[#7a3ffa1a] h-10 text-[#051264d2] dark:placeholder:text-[#a881e6a1] dark:text-[#d7c5f5a1] placeholder:text-[#6315e16e] focus-visible:ring-0"
                                 />
                             </div>
-                            <Button type="submit" className="w-full py-5 dark:text-[#d1ccd5] dark:bg-[#3b0b87] bg-[#7a3ffacb] hover:bg-[#5409cd]" > {t("saveChanges")}  </Button>
+                            <Button type="submit" className="w-full py-5  bg-[#e1d4fe51] border-2  hover:border-[#5409cddb] border-[#b88ffa31] text-[#3b0b87] dark:bg-[#3b0b87] hover:text-white hover:bg-[#5409cddb] dark:text-[#d1ccd5]" > {t("saveChanges")}  </Button>
                         </form>
                     </DialogContent>
                 </Dialog>

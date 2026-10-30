@@ -42,7 +42,7 @@ export default function Theme() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger className="cursor-pointer">
-        <ActiveIcon />
+        <ActiveIcon size={19} />
       </DropdownMenuTrigger>
 
       <DropdownMenuContent className="dark:text-current mt-2">
@@ -51,7 +51,7 @@ export default function Theme() {
           onValueChange={(value) => setTheme(value)}
         >
           <DropdownMenuRadioItem value="light"  className="focus:bg-[#F1EBFE] dark:focus:bg-[#c5a3fd3c] text-[#031381] dark:text-current">
-            <SunMedium />
+            <SunMedium/>
             {t("light")}
           </DropdownMenuRadioItem>
 
