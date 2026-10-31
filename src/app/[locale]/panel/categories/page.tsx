@@ -96,9 +96,9 @@ export default function categoryPage() {
                     <p className="text-base text-[#7B29FB] dark:text-[#decaf9]"> {t("totalCategories")}: ({categories.length}) </p>
                 </div>
                 <Dialog open={open} onOpenChange={setOpen}>
-                    <DialogTrigger render={<Button className="text-base  bg-[#8C29FB] py-5  pr-3.5 dark:hover:text-[#d1ccd5] dark:bg-[#261666] dark:text-[#d1ccd5]  hover:bg-[#5409cd] cursor-pointer"><Plus strokeWidth={3} /> {t("addCategory")}</Button>} />
+                    <DialogTrigger render={<Button className="text-base  bg-[#8C29FB] py-5  pr-3.5 dark:hover:text-[#d1ccd5] dark:bg-[#6A50B1] dark:text-white  hover:bg-[#5409cd] cursor-pointer"><Plus strokeWidth={3} /> {t("addCategory")}</Button>} />
 
-                    <DialogContent className="border-[#7a3ffa1a] text-[#051164] dark:text-[#dbc8f9] dark:border-[#b392fbab]   dark:bg-[#0a0220]">
+                    <DialogContent className="border-[#7a3ffa1a] text-[#051164] dark:text-[#dbc8f9] dark:border-[#b392fbab]   dark:bg-[#0B0E1A]">
                         <DialogHeader>
                             <DialogTitle className="text-[#051164] dark:text-[#d1ccd5] font-bold">	{t("addNewCategory")}</DialogTitle>
                         </DialogHeader>
@@ -118,7 +118,7 @@ export default function categoryPage() {
                                     className="border-[#7a3ffa1a] text-[#051164] placeholder:text-[#05126463] h-10 dark:placeholder:text-[#b098d6bd] dark:text-[#bea2eba1] focus-visible:ring-0"
                                 />
                             </div>
-                            <Button type="submit" className=" cursor-pointer dark:text-[#d1ccd5]  w-full py-5 mt-3 bg-[#e1d4fe51] border-2  hover:border-[#5409cddb] border-[#b88ffa31] text-[#3b0b87] dark:bg-[#3b0b87] hover:bg-[#5409cd] hover:text-white">{t("addCategory")}</Button>
+                            <Button type="submit" className=" cursor-pointer dark:text-white  w-full py-5 mt-3 bg-[#e1d4fe51] border-2  hover:border-[#5409cddb] border-[#b88ffa31] text-[#3b0b87] dark:bg-[#6A50B1] hover:bg-[#5409cd] hover:text-white">{t("addCategory")}</Button>
                         </form>
                     </DialogContent>
                 </Dialog>
@@ -128,7 +128,7 @@ export default function categoryPage() {
                         if (!isOpen) setEditingCategory(null)
                     }}
                 >
-                    <DialogContent className="border-[#7a3ffa1a] text-[#051164] dark:border-[#b392fbab] dark:text-[#dbc8f9] dark:bg-[#0a0220]">
+                    <DialogContent className="border-[#7a3ffa1a] text-[#051164] dark:border-[#b392fbab] dark:text-[#dbc8f9] dark:bg-[#0B0E1A]">
                         <DialogHeader>
                             <DialogTitle className="text-[#051164] dark:text-[#d1ccd5] font-bold">	{t("editCategory")}</DialogTitle>
                         </DialogHeader>
@@ -146,20 +146,20 @@ export default function categoryPage() {
                                     className="border-[#7a3ffa1a] h-10 text-[#051264d2] dark:placeholder:text-[#a881e6a1] dark:text-[#d7c5f5a1] placeholder:text-[#6315e16e] focus-visible:ring-0"
                                 />
                             </div>
-                            <Button type="submit" className="w-full py-5  bg-[#e1d4fe51] border-2  hover:border-[#5409cddb] border-[#b88ffa31] text-[#3b0b87] dark:bg-[#3b0b87] hover:text-white hover:bg-[#5409cddb] dark:text-[#d1ccd5]" > {t("saveChanges")}  </Button>
+                            <Button type="submit" className="w-full py-5  bg-[#e1d4fe51] border-2  hover:border-[#5409cddb] border-[#b88ffa31] text-[#3b0b87] dark:bg-[#6A50B1] hover:text-white hover:bg-[#5409cddb] dark:text-white" > {t("saveChanges")}  </Button>
                         </form>
                     </DialogContent>
                 </Dialog>
             </div>
 
             {mounted && (
-                <div className="rounded-md border-2 border-[#7a3ffa1a] dark:bg-[#0E0B2F]">
+                <div className="rounded-md border-2 border-[#7a3ffa1a] dark:bg-[#14162A]">
                     <Table className="">
-                        <TableHeader className="h-15 text-lg bg-[#f1ebfe6a] dark:bg-[#7a3ffa23]">
+                        <TableHeader className="h-15 text-base bg-[#f1ebfe6a] dark:bg-[#6a50b11e]">
                             <TableRow className="hover:bg-transparent dark:hover:bg-transparent">
-                                <TableHead className={`${locale === "fa" ? "text-right pr-18" : "xl:pl-22"} font-semibold text-[#5409cd] dark:text-[#bd8efb]`}>{t("id")}</TableHead>
-                                <TableHead className={`${locale === "fa" ? "text-right" : "text-left xl:pl-1"} font-semibold text-[#5409cd] dark:text-[#bd8efb]`}>{t("categoryName")}</TableHead>
-                                <TableHead className={` font-semibold text-[#5409cd] dark:text-[#bd8efb]  ${locale === "fa" ? "text-center pl-10" : "text-center pr-5"}`}>{t("actions")}</TableHead>
+                                <TableHead className={`${locale === "fa" ? "text-right pr-18" : "xl:pl-22"} font-semibold text-[#5409cd] dark:text-[#d7c7f9b8]`}>{t("id")}</TableHead>
+                                <TableHead className={`${locale === "fa" ? "text-right" : "text-left xl:pl-1"} font-semibold text-[#5409cd] dark:text-[#d7c7f9b8]`}>{t("categoryName")}</TableHead>
+                                <TableHead className={` font-semibold text-[#5409cd] dark:text-[#d7c7f9b8]  ${locale === "fa" ? "text-center pl-10" : "text-center pr-5"}`}>{t("actions")}</TableHead>
                             </TableRow>
                         </TableHeader>
                         <TableBody >
@@ -168,10 +168,10 @@ export default function categoryPage() {
                                     <TableCell className={`${locale === "fa" ? "pr-16" : "xl:pl-22"}`}>{item.id}</TableCell>
                                     <TableCell> {tCategories(categoryTranslationKeys[item.name as keyof typeof categoryTranslationKeys])}</TableCell>
                                     <TableCell className="flex items-center justify-center">
-                                        <button onClick={() => handleEditClick(item)} className="text-[#6e2dfab3] dark:text-[#6e2dfae0]  cursor-pointer ">
+                                        <button onClick={() => handleEditClick(item)} className="text-[#6e2dfab3] dark:text-[#a286f0da]  cursor-pointer ">
                                             <PencilSparkles className=" size-5" />
                                         </button>
-                                        <button onClick={() => handleDeleteCategory(item.id)} className="m-3 text-red-600 dark:text-red-900 cursor-pointer">
+                                        <button onClick={() => handleDeleteCategory(item.id)} className="m-3 text-red-600 dark:text-[#8A0B19] cursor-pointer">
                                             <Trash className="size-5" />
                                         </button>
                                     </TableCell>

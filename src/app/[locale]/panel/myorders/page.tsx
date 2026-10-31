@@ -48,7 +48,7 @@ export default function MyOrdersPage() {
                         const count = mockMyOrders.filter((order) => order.status === item.status).length
 
                         return (
-                            <div key={item.status} className="rounded-2xl border border-[#7a3ffa0b] dark:bg-[#0E0B2F] bg-[#f1ebfe6a] p-5 shadow-sm flex flex-col justify-center items-center md:w-58  w-45 md:h-30 ">
+                            <div key={item.status} className="rounded-2xl border border-[#7a3ffa0b] dark:bg-[#14162A] bg-[#f1ebfe6a] p-5 shadow-sm flex flex-col justify-center items-center md:w-58  w-45 md:h-30 ">
                                 <div className="flex items-center justify-between gap-3">
                                     <Icon className="h-6 w-6 text-[#7a3ffa]" />
                                     <p className="text-sm text-[#031481a6] dark:text-[#FAFAFA]">
@@ -64,15 +64,15 @@ export default function MyOrdersPage() {
                     })}
                 </div>
             </div>
-            <div className="rounded-md border-2 border-[#7a3ffa1a] mt-8  dark:bg-[#0E0B2F] xl:w-full w-80 lg:w-180 sm:w-170 overflow-x-auto">
+            <div className="rounded-md border-2 border-[#7a3ffa1a] mt-8  dark:bg-[#0B0E1A] xl:w-full w-80 lg:w-180 sm:w-170 overflow-x-auto">
                 <Table>
-                    <TableHeader className="h-15 text-lg bg-[#f1ebfe6a] dark:bg-[#7a3ffa23]">
+                    <TableHeader className="h-15 text-base bg-[#f1ebfe6a] dark:bg-[#6a50b11e]">
                         <TableRow className="hover:bg-transparent dark:hover:bg-transparent">
-                            <TableHead className={`font-bold  text-[#5409cd] dark:text-[#bd8efb] ${ locale === "fa" ? "text-right pr-16" : "xl:pl-16 pl-7"} `}>{t("orderId")}</TableHead>
-                            <TableHead className={`font-bold  text-[#5409cd] dark:text-[#bd8efb] ${locale === "fa" ? "text-right" : ""}`}>{t("product")}</TableHead>
-                            <TableHead className={`font-bold  text-[#5409cd] dark:text-[#bd8efb] ${locale === "fa" ? "text-right" : ""}`}>{t("date")}</TableHead>
-                            <TableHead className={`font-bold  text-[#5409cd] dark:text-[#bd8efb] ${locale === "fa" ? "text-right pr-10" : ""}`}>{t("price")}</TableHead>
-                            <TableHead className={`font-bold  text-[#5409cd] dark:text-[#bd8efb] ${locale === "fa" ? "text-right" : ""}`}>{t("status")}</TableHead>
+                            <TableHead className={`font-bold  text-[#5409cd] dark:text-[#d7c7f9b8] ${ locale === "fa" ? "text-right pr-16" : "xl:pl-16 pl-7"} `}>{t("orderId")}</TableHead>
+                            <TableHead className={`font-bold  text-[#5409cd] dark:text-[#d7c7f9b8] ${locale === "fa" ? "text-right" : ""}`}>{t("product")}</TableHead>
+                            <TableHead className={`font-bold  text-[#5409cd] dark:text-[#d7c7f9b8] ${locale === "fa" ? "text-right" : ""}`}>{t("date")}</TableHead>
+                            <TableHead className={`font-bold  text-[#5409cd] dark:text-[#d7c7f9b8] ${locale === "fa" ? "text-right pr-10" : ""}`}>{t("price")}</TableHead>
+                            <TableHead className={`font-bold  text-[#5409cd] dark:text-[#d7c7f9b8] ${locale === "fa" ? "text-right" : ""}`}>{t("status")}</TableHead>
                         </TableRow>
                     </TableHeader>
 
@@ -93,12 +93,12 @@ export default function MyOrdersPage() {
 
                                 <TableCell>
                                     <span
-                                        className={`rounded-lg px-4 py-2.5 text-sm font-semibold ${locale === "fa" &&  order.status === "cancelled" ? "px-6" : ""} ${order.status === "pending" ? "bg-[#F9F7FF] dark:bg-[#f1ebfeac] dark:text-[#6219d6] text-[#7B29FB] px-5"
+                                        className={`rounded-lg px-4 py-2.5 text-sm font-semibold ${locale === "fa" &&  order.status === "cancelled" ? "px-6" : ""} ${order.status === "pending" ? "bg-[#F9F7FF] dark:bg-[#39305d9f] dark:text-[#af8dfc] text-[#7B29FB] px-5"
                                             : order.status === "delivered"
-                                                ? "bg-green-50 dark:bg-[#dbfce7a3] dark:text-green-900 text-green-700"
+                                                ? "bg-green-50 dark:bg-[#39305d9f] dark:text-green-700 text-green-700"
                                                 : order.status === "cancelled"
-                                                    ? "bg-red-50 dark:bg-[#ffe2e29a] dark:text-red-900 text-red-700"
-                                                    : "bg-blue-50 dark:bg-[#dbeafea6] dark:text-blue-900 text-[#031381]"
+                                                    ? "bg-red-50 dark:bg-[#39305d9f] dark:text-red-800 text-red-700"
+                                                    : "bg-blue-50 dark:bg-[#39305d9f] px-4.5 dark:text-blue-500 text-[#031381]"
                                             }`}
                                     >
                                         {order.status === "pending" ? t("pending")

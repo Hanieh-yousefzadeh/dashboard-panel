@@ -27,7 +27,7 @@ export default function DashboardCard({ title, value, icon, description }: Card)
         return null;
     }
     return (
-        <div className="rounded-2xl border border-[#7a3ffa0b] bg-[#f1ebfe6a] dark:bg-[#0E0B2F] p-5 shadow-sm flex flex-col justify-center items-center md:w-58  w-45 md:h-30 ">
+        <div className="rounded-2xl border border-[#7a3ffa0b] bg-[#f1ebfe6a] dark:bg-[#14162A] p-5 shadow-sm flex flex-col justify-center items-center md:w-58  w-45 md:h-30 ">
             <div className="flex items-center justify-between">
                 <div className="rounded-lg p-2"> <Icon className="sm:size-5" /> </div>
                 <p className="text-sm"> {title} </p>

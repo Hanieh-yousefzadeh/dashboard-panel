@@ -94,7 +94,7 @@ export default function LoginPage() {
                                 <p className="text-sm text-red-600">{t("error")}</p>
                             )}
 
-                            <Button type="submit" className="w-full bg-[#7925FF] py-5.5 text-lg cursor-pointer dark:text-[#d1ccd5] dark:hover:bg-[#480bab] hover:bg-[#071499]"> {t("submit")} </Button>
+                            <Button type="submit" className="w-full bg-[#7925FF] dark:bg-[#6A50B1] py-5.5 text-lg cursor-pointer dark:text-white dark:hover:bg-[#4b3094] hover:bg-[#071499]"> {t("submit")} </Button>
                         </form>
                     </CardContent>
                 </Card>

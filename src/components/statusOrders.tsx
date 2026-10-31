@@ -7,7 +7,7 @@ export default function StatusOrders() {
 
   const tStatus = useTranslations("AdminDashboard.orderStatus")
   return (
-    <section className="xl:w-1/2 rounded-xl border  border-[#7a3ffa1a] dark:bg-[#0E0B2F] bg-card p-5 shadow-sm ">
+    <section className="xl:w-1/2 rounded-xl border  border-[#7a3ffa1a] dark:bg-[#14162A] bg-card p-5 shadow-sm ">
       <h2 className="mb-7 text-lg font-semibold">  {t("title")}</h2>
 
       <div className="">
