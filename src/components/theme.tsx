@@ -48,7 +48,7 @@ export default function Theme() {
       <DropdownMenuContent className="dark:text-current mt-2">
         <DropdownMenuRadioGroup
           value={theme}
-          onValueChange={(value) => setTheme(value)}
+          onValueChange={(value) =>  setTheme(value) }
         >
           <DropdownMenuRadioItem value="light"  className="focus:bg-[#F1EBFE] dark:focus:bg-[#c5a3fd3c] text-[#031381] dark:text-current">
             <SunMedium/>

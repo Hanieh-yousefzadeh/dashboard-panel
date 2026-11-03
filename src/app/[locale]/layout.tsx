@@ -8,7 +8,6 @@ import { routing } from "@/i18n/routing";
 
 import StoreProvider from "@/providers/StoreProvider";
 import AuthStorage from "@/lib/authStorage";
-import { ThemeProvider } from "@/components/themeprovider";
 import CustomersStorage from "@/lib/customerStorage";
 import VendorsStorage from "@/lib/vendorStorage";
 import ProductStorage from "@/lib/productStorage";
@@ -59,17 +58,17 @@ export default async function RootLayout({
     return (
         <NextIntlClientProvider locale={locale} messages={messages} >
             <StoreProvider>
-                <ThemeProvider>
-                    <div dir={locale === "fa" ? "rtl" : "ltr"} className="min-h-screen flex flex-col" >
-                        <AuthStorage />
-                        <CustomersStorage />
-                        <VendorsStorage />
-                        <ProductStorage />
-                        <CategoriesStorage />
-                        <OrderStorage />
-                        {children}
-                    </div>
-                </ThemeProvider>
+
+                <div dir={locale === "fa" ? "rtl" : "ltr"} className="min-h-screen flex flex-col" >
+                    <AuthStorage />
+                    <CustomersStorage />
+                    <VendorsStorage />
+                    <ProductStorage />
+                    <CategoriesStorage />
+                    <OrderStorage />
+                    {children}
+                </div>
+
             </StoreProvider>
         </NextIntlClientProvider>
     );
