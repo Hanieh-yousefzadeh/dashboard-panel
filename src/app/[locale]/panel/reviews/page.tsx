@@ -75,9 +75,9 @@ export default function MyOpinionsPage() {
                     if (!isOpen) setEditingOpinion(null)
                 }}
             >
-                <DialogContent className="border-[#7a3ffa1a] text-[#5409cd] dark:text-[#dbc8f9] dark:border-[#b392fbab]   dark:bg-[#0a0220]">
+                <DialogContent className="border-[#7a3ffa1a] text-[#051164] dark:text-[#dbc8f9] dark:border-[#b392fbab]   dark:bg-[#0B0E1A]">
                     <DialogHeader>
-                        <DialogTitle className="font-bold text-[#5409cd] dark:text-[#d1ccd5]"> {t("editTitle")} </DialogTitle>
+                        <DialogTitle className="font-bold text-[#051164] dark:text-[#d1ccd5]"> {t("editTitle")} </DialogTitle>
                     </DialogHeader>
 
                     <form onSubmit={handleEditSubmit} className="flex flex-col gap-7 pt-5 dark:text-[#d1ccd5]">
@@ -89,26 +89,26 @@ export default function MyOpinionsPage() {
                                 onChange={handleMessageChange}
                                 placeholder={t("messagePlaceholder")}
                                 required
-                                className="min-h-28 border-[#7a3ffa1a] text-[#1e0547] focus-visible:ring-0 dark:placeholder:text-[#b098d6bd] dark:text-[#bea2eba1]"
+                                className="min-h-28 border-[#7a3ffa1a] text-[#051264d2] focus-visible:ring-0 dark:placeholder:text-[#b098d6bd] dark:text-[#bea2eba1]"
                             />
                         </div>
-                        <Button type="submit" className="mt-3 w-full bg-[#7a3ffacb] py-5 hover:bg-[#5409cd]  dark:text-[#d1ccd5] dark:bg-[#3b0b87]">
+                        <Button type="submit" className="mt-3 w-full py-5 bg-[#e1d4fe51] border-2  hover:border-[#5409cddb] border-[#b88ffa31] text-[#3b0b87] dark:bg-[#6A50B1] hover:bg-[#5409cddb] dark:text-white">
                             {t("saveChanges")}
                         </Button>
                     </form>
                 </DialogContent>
             </Dialog>
 
-            <div className="xl:w-300 md:w-3xl w-80 overflow-x-auto rounded-md border border-[#7a3ffa1a] dark:bg-[#0E0B2F] mt-4  shadow-sm">
+            <div className="xl:w-300 md:w-3xl w-80 overflow-x-auto rounded-md border border-[#7a3ffa1a] dark:bg-[#14162A] mt-4  shadow-sm">
                 <Table >
-                    <TableHeader className="h-15 text-lg bg-[#f1ebfe6a] dark:bg-[#7a3ffa23]">
+                    <TableHeader className="h-15 text-base bg-[#f1ebfe6a] dark:bg-[#6a50b11e]">
                         <TableRow className="hover:bg-transparent dark:hover:bg-transparent">
-                            <TableHead className={`dark:text-[#bd8efb] font-bold text-[#5409cd] ${locale === "fa" ? " text-right pr-10" : "pl-9"}`}>{t("product")}</TableHead>
-                            <TableHead className={`dark:text-[#bd8efb] font-bold text-[#5409cd] ${locale === "fa" ? "text-right" : ""}`}>{t("type")}</TableHead>
-                            <TableHead className={`dark:text-[#bd8efb] font-bold text-[#5409cd] ${locale === "fa" ? "text-right pr-17" : "pl-10"}`}>{t("message")}</TableHead>
-                            <TableHead className={`dark:text-[#bd8efb] font-bold text-[#5409cd] ${locale === "fa" ? "text-center" : " pl-5"}`}>{t("status")}</TableHead>
-                            <TableHead className={`dark:text-[#bd8efb] font-bold text-[#5409cd] ${locale === "fa" ? "text-right pr-21" : "pl-10"}`}>{t("adminReply")}</TableHead>
-                            <TableHead className={`dark:text-[#bd8efb] font-bold text-[#5409cd] ${locale === "fa" ? "text-center" : "pr-6"}`}>{t("actions")}</TableHead>
+                            <TableHead className={`dark:text-[#d7c7f9b8] font-bold text-[#5409cd] ${locale === "fa" ? " text-right pr-10" : "pl-9"}`}>{t("product")}</TableHead>
+                            <TableHead className={`dark:text-[#d7c7f9b8] font-bold text-[#5409cd] ${locale === "fa" ? "text-right" : ""}`}>{t("type")}</TableHead>
+                            <TableHead className={`dark:text-[#d7c7f9b8] font-bold text-[#5409cd] ${locale === "fa" ? "text-right pr-17" : "pl-10"}`}>{t("message")}</TableHead>
+                            <TableHead className={`dark:text-[#d7c7f9b8] font-bold text-[#5409cd] ${locale === "fa" ? "text-center" : " pl-5"}`}>{t("status")}</TableHead>
+                            <TableHead className={`dark:text-[#d7c7f9b8] font-bold text-[#5409cd] ${locale === "fa" ? "text-right pr-21" : "pl-10"}`}>{t("adminReply")}</TableHead>
+                            <TableHead className={`dark:text-[#d7c7f9b8] font-bold text-[#5409cd] ${locale === "fa" ? "text-center" : "pr-6"}`}>{t("actions")}</TableHead>
                         </TableRow>
                     </TableHeader>
 
@@ -131,7 +131,7 @@ export default function MyOpinionsPage() {
 
                                 <TableCell><div className={`line-clamp-1 ${locale === "fa" ? "pr-15" : "pl-10"}`}> {opinion.message === "The product quality was good." ? t("goodQualityMessage") : t("printedVersionQuestion")}</div></TableCell>
 
-                                <TableCell><div className={`rounded-lg text-center py-2 px-1.5 text-sm font-semibold ${opinion.status === "Answered" ? "bg-green-50 text-green-700 dark:bg-[#dbfce7a3] dark:text-green-900" : "bg-[#ede8fd] dark:bg-[#f1ebfeac] text-[#031481bd]"}`}>
+                                <TableCell><div className={`rounded-lg text-center py-2 px-1.5 text-sm font-semibold ${opinion.status === "Answered" ? "bg-green-50 text-green-700 dark:bg-[#39305d9f] dark:text-green-700" : "bg-[#ede8fd] dark:bg-[#39305d9f] dark:text-[#af8dfc] text-[#5909CD]"}`}>
                                     {opinion.status === "Answered" ? t("answered") : t("pending")}
                                 </div>
                                 </TableCell>
@@ -145,12 +145,12 @@ export default function MyOpinionsPage() {
                                 <TableCell>
                                     <div className="flex items-center justify-center pr-7">
                                         <button onClick={() => handleEditClick(opinion)}
-                                            className="text-[#6e2dfab3] cursor-pointer dark:text-[#6e2dfae0]" >
+                                            className="text-[#6e2dfab3] cursor-pointer dark:text-[#a286f0da]" >
                                             <PencilSparkles className="size-5" />
                                         </button>
 
                                         <button onClick={() => handleDeleteOpinion(opinion.id)}
-                                            className="m-3 text-red-600 dark:text-red-900 cursor-pointer">
+                                            className="m-3 text-red-600 dark:text-[#8A0B19] cursor-pointer">
                                             <Trash className="size-5" />
                                         </button>
                                     </div>

@@ -47,13 +47,13 @@ export default function MyFavoritePage() {
         <div className="p-6">
             <h1 className={`mb-8 ${locale === "fa" ? "pr-3" : "pl-3"}  text-2xl font-bold`}>{t("title")} </h1>
 
-            <div className={`mt-4 ${locale === "fa" ? "mr-3" : "ml-3 "}  rounded-md border border-[#7a3ffa1a] shadow-sm dark:bg-[#0E0B2F] xl:w-300 w-80 lg:w-180 sm:w-170 overflow-x-auto`}>
+            <div className={`mt-4 ${locale === "fa" ? "mr-3" : "ml-3 "}  rounded-md border border-[#7a3ffa1a] shadow-sm dark:bg-[#0B0E1A] xl:w-300 w-80 lg:w-180 sm:w-170 overflow-x-auto`}>
                 <Table>
-                    <TableHeader className="h-15 text-lg bg-[#f1ebfe6a] dark:bg-[#7a3ffa23]">
+                    <TableHeader className="h-15 text-base bg-[#f1ebfe6a] dark:bg-[#6a50b11e]">
                         <TableRow className="hover:bg-transparent dark:hover:bg-transparent">
-                            <TableHead className={` ${locale === "fa" ? "text-right pr-20" : "xl:pl-10 pl-5"} font-semibold text-[#5409cd] dark:text-[#bd8efb]`}> {t("product")}</TableHead>
-                            <TableHead className={` ${locale == "fa" ? "text-right" : ""} font-semibold text-[#5409cd] dark:text-[#bd8efb]`}>{t("price")} </TableHead>
-                            <TableHead className="text-center  font-semibold text-[#5409cd] dark:text-[#bd8efb]"> {t("action")}</TableHead>
+                            <TableHead className={` ${locale === "fa" ? "text-right pr-20" : "xl:pl-10 pl-5"} font-semibold text-[#5409cd] dark:text-[#d7c7f9b8]`}> {t("product")}</TableHead>
+                            <TableHead className={` ${locale == "fa" ? "text-right" : ""} font-semibold text-[#5409cd] dark:text-[#d7c7f9b8]`}>{t("price")} </TableHead>
+                            <TableHead className="text-center  font-semibold text-[#5409cd] dark:text-[#d7c7f9b8]"> {t("action")}</TableHead>
                         </TableRow>
                     </TableHeader>
 
@@ -78,7 +78,7 @@ export default function MyFavoritePage() {
                                 <TableCell className="text-center">
                                     <button
                                         onClick={() => deleteFavorite(product.id)}
-                                        className="rounded-lg p-2 text-red-500 dark:text-red-900 hover:bg-red-50">
+                                        className="rounded-lg p-2 text-red-500 dark:text-[#8A0B19] hover:bg-red-50">
                                         <Trash className="size-5" />
                                     </button>
                                 </TableCell>

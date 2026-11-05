@@ -1,16 +1,17 @@
 import { userDashboardCard } from "@/data/mock-dashuser"
 import DashboardCard from "@/components/dashboard-card"
-import { useTranslations } from "next-intl"
+import { useLocale, useTranslations } from "next-intl"
 
 export default function UserDashboard() {
     const t = useTranslations("UserDashboard")
+    const locale = useLocale()
     return (
         <div className="py-5 px-6">
 
             <h1 className="text-2xl font-bold pb-8 pl-2">{t("title")}</h1>
 
 
-            <div className="flex flex-wrap xl:pl-25 justify-center gap-7">
+            <div className={`flex flex-wrap ${locale === "fa" ? "xl:pr-25" :" xl:pl-25"} justify-center gap-7`}>
                 {userDashboardCard.map((card) => (
                     <DashboardCard
                         key={card.title}

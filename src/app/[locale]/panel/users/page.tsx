@@ -94,23 +94,23 @@ export default function UsersPage() {
     const t = useTranslations("UsersPage")
     const locale = useLocale()
     return (
-        <div className="p-5 pl-8 xl:w-316 md:w-3xl w-80 overflow-x-atuo ">
+        <div className={`p-5 ${locale === "fa" ? "pr-8" : "pl-8"}  xl:w-316 md:w-3xl w-80 overflow-x-atuo `}>
             <div className="flex justify-between pb-12">
                 <div className="flex flex-col gap-3">
                     <h1 className="lg:text-2xl font-bold"> 	{t("title")}</h1>
                     <p className="text-base text-[#7B29FB] dark:text-[#decaf9]">  {t("totalCustomers", {count: mounted ? customers.length : "..."})} </p>
                 </div>
                 <Dialog open={open} onOpenChange={setOpen}>
-                    <DialogTrigger render={<Button className="text-base bg-[#7a3ffacb] py-4.5 pr-3.5 hover:bg-[#5409cd] dark:bg-[#261666] dark:text-[#d1ccd5] cursor-pointer dark:hover:text-current"><Plus strokeWidth={3} />	{t("addUser")}</Button>} />
+                    <DialogTrigger render={<Button className="text-base bg-[#8C29FB] py-5 pr-3.5 hover:bg-[#5409cd] dark:bg-[#6A50B1] dark:text-white cursor-pointer dark:hover:text-current"><Plus strokeWidth={3} />	{t("addUser")}</Button>} />
 
-                    <DialogContent className="border-[#7a3ffa1a] text-[#5409cd] dark:text-[#dbc8f9] dark:border-[#b392fbab]   dark:bg-[#0a0220]">
+                    <DialogContent className="border-[#7a3ffa1a] text-[#051164] dark:text-[#dbc8f9] dark:border-[#b392fbab]   dark:bg-[#0B0E1A]">
                         <DialogHeader>
-                            <DialogTitle className="text-[#5409cd] dark:text-[#d1ccd5]  font-bold">{t("addNewUser")}</DialogTitle>
+                            <DialogTitle className="text-[#051164] dark:text-[#d1ccd5]  font-bold">{t("addNewUser")}</DialogTitle>
                         </DialogHeader>
 
                         <form
                             onSubmit={handleSubmit}
-                            className=" flex flex-col gap-7 pt-5 text-[#6200ff] dark:text-[#d1ccd5]"
+                            className=" flex flex-col gap-7 pt-5 text-[#051164] dark:text-[#d1ccd5]"
                         >
                             <div className="flex flex-col gap-2">
                                 <Label htmlFor="name">{t("name")}</Label>
@@ -120,7 +120,7 @@ export default function UsersPage() {
                                     onChange={(e) => setName(e.target.value)}
                                     placeholder={t("enterName")}
                                     required
-                                    className="border-[#7a3ffa1a] h-10 dark:placeholder:text-[#b098d6bd] dark:text-[#bea2eba1] text-[#4104a2] placeholder:text-[#6315e16e] focus-visible:ring-0"
+                                    className="border-[#7a3ffa1a] h-10 dark:placeholder:text-[#b098d6bd] dark:text-[#bea2eba1] text-[#051164] placeholder:text-[#05126463] focus-visible:ring-0"
                                 />
                             </div>
 
@@ -133,11 +133,11 @@ export default function UsersPage() {
                                     onChange={(e) => setEmail(e.target.value)}
                                     placeholder={t("enterEmail")}
                                     required
-                                    className="border-[#7a3ffa1a] h-10 dark:placeholder:text-[#b098d6bd] dark:text-[#bea2eba1]  text-[#4104a2] placeholder:text-[#6315e16e] focus-visible:ring-0 "
+                                    className="border-[#7a3ffa1a] h-10 dark:placeholder:text-[#b098d6bd] dark:text-[#bea2eba1]  text-[#051164] placeholder:text-[#05126463] focus-visible:ring-0 "
                                 />
                             </div>
 
-                            <Button type="submit" className=" cursor-pointer w-full dark:text-[#d1ccd5] py-5 mt-3 hover:text-current bg-[#7a3ffacb] dark:bg-[#3b0b87] hover:bg-[#5409cd]"> {t("addCustomer")}</Button>
+                            <Button type="submit" className=" cursor-pointer w-full dark:text-[#d1ccd5] py-5 mt-3  bg-[#e1d4fe51] border-2  hover:border-[#5409cddb] border-[#b88ffa31] text-[#3b0b87] dark:bg-[#6A50B1] hover:bg-[#5409cd] hover:text-white"> {t("addCustomer")}</Button>
                         </form>
                     </DialogContent>
                 </Dialog>
@@ -149,9 +149,9 @@ export default function UsersPage() {
                         }
                     }}
                 >
-                    <DialogContent className="border-[#7a3ffa1a] dark:border-[#b392fbab] text-[#5409cd] dark:text-[#dbc8f9] dark:bg-[#0a0220]">
+                    <DialogContent className="border-[#7a3ffa1a] text-[#051164] dark:border-[#b392fbab] dark:text-[#dbc8f9] dark:bg-[#0B0E1A]">
                         <DialogHeader>
-                            <DialogTitle className="text-[#5409cd] dark:text-[#d1ccd5] font-bold"> {t("editCustomer")} </DialogTitle>
+                            <DialogTitle className="text-[#051164] dark:text-[#d1ccd5] font-bold"> {t("editCustomer")} </DialogTitle>
                         </DialogHeader>
 
                         <form onSubmit={handleEditSubmit} className="flex flex-col gap-7 pt-5 dark:text-[#d1ccd5]">
@@ -162,7 +162,7 @@ export default function UsersPage() {
                                     value={editName}
                                     onChange={(e) => setEditName(e.target.value)}
                                     required
-                                    className="text-[#4104a2] h-10 dark:placeholder:text-[#a881e6a1] dark:text-[#d7c5f5a1] focus-visible:ring-0"
+                                    className="text-[#051264d2] h-10 dark:placeholder:text-[#a881e6a1] dark:text-[#d7c5f5a1] focus-visible:ring-0"
                                 />
                             </div>
 
@@ -174,11 +174,11 @@ export default function UsersPage() {
                                     value={editEmail}
                                     onChange={(e) => setEditEmail(e.target.value)}
                                     required
-                                    className="text-[#4104a2] h-10 dark:placeholder:text-[#a881e6a1] dark:text-[#d7c5f5a1] focus-visible:ring-0"
+                                    className="text-[#051264c9] h-10 dark:placeholder:text-[#a881e6a1] dark:text-[#d7c5f5a1] focus-visible:ring-0"
                                 />
                             </div>
 
-                            <Button type="submit" className="w-full py-5 bg-[#7a3ffacb] dark:bg-[#3b0b87] hover:bg-[#5409cd] dark:text-[#d1ccd5]" >
+                            <Button type="submit" className="w-full py-5 bg-[#e1d4fe51] border-2  hover:border-[#5409cddb] border-[#b88ffa31] text-[#3b0b87] dark:bg-[#6A50B1] hover:text-white hover:bg-[#5409cddb] dark:text-white" >
                                	{t("saveChanges")}
                             </Button>
                         </form>
@@ -189,15 +189,15 @@ export default function UsersPage() {
 
 
             {mounted && (
-                <div className="rounded-md border-2 border-[#7a3ffa1a] dark:bg-[#0E0B2F]">
+                <div className="rounded-md border-2 border-[#7a3ffa1a] dark:bg-[#14162A]">
                     <Table className="">
-                        <TableHeader className="h-15 text-lg bg-[#f1ebfe6a] dark:bg-[#7a3ffa23]">
+                        <TableHeader className="h-15 text-base bg-[#f1ebfe6a] dark:bg-[#6a50b11e]">
                             <TableRow className="hover:bg-transparent dark:hover:bg-transparent">
-                                <TableHead className={`font-semibold text-[#5409cd] dark:text-[#bd8efb] ${locale === "fa" ? "text-right xl:pr-15" :"text-left xl:pl-11" }`}>{t("id")}</TableHead>
-                                <TableHead className={`font-semibold text-[#5409cd] dark:text-[#bd8efb] ${locale === "fa" ? "text-right" :"text-left" }`}>{t("name")}</TableHead>
-                                <TableHead className={`font-semibold text-[#5409cd] dark:text-[#bd8efb] ${locale === "fa" ? "text-right" :"text-left" }`}>{t("email")}</TableHead>
-                                <TableHead className={`font-semibold text-[#5409cd] dark:text-[#bd8efb] ${locale === "fa" ? "text-right" :"text-left" }`}>{t("created")}</TableHead>
-                                <TableHead className={`font-semibold text-[#5409cd] dark:text-[#bd8efb] ${locale === "fa" ? "text-center pl-8" :"text-center" }`}>{t("actions")}</TableHead>
+                                <TableHead className={`font-semibold text-[#5409cd] dark:text-[#d7c7f9b8] ${locale === "fa" ? "text-right xl:pr-15" :"text-left xl:pl-11" }`}>{t("id")}</TableHead>
+                                <TableHead className={`font-semibold text-[#5409cd] dark:text-[#d7c7f9b8] ${locale === "fa" ? "text-right" :"text-left" }`}>{t("name")}</TableHead>
+                                <TableHead className={`font-semibold text-[#5409cd] dark:text-[#d7c7f9b8] ${locale === "fa" ? "text-right" :"text-left" }`}>{t("email")}</TableHead>
+                                <TableHead className={`font-semibold text-[#5409cd] dark:text-[#d7c7f9b8] ${locale === "fa" ? "text-right" :"text-left" }`}>{t("created")}</TableHead>
+                                <TableHead className={`font-semibold text-[#5409cd] dark:text-[#d7c7f9b8] ${locale === "fa" ? "text-center pl-8" :"text-center" }`}>{t("actions")}</TableHead>
                             </TableRow>
                         </TableHeader>
 
@@ -210,10 +210,10 @@ export default function UsersPage() {
                                     <TableCell>{customer.created}</TableCell>
 
                                     <TableCell className={`flex items-center justify-center ${ locale === "fa" ? "gap-2" : "gap-0"}`}>
-                                        <button onClick={() => handleEditClick(customer)} className="text-[#6e2dfab3] dark:text-[#6e2dfae0] cursor-pointer ">
+                                        <button onClick={() => handleEditClick(customer)} className="text-[#6e2dfab3] dark:text-[#a286f0da] cursor-pointer ">
                                             <PencilSparkles className=" size-5" />
                                         </button>
-                                        <button onClick={() => handleDeleteCustomer(customer.id)} className="ml-3 text-red-600 dark:text-red-900 cursor-pointer">
+                                        <button onClick={() => handleDeleteCustomer(customer.id)} className="ml-3 text-red-600 dark:text-[#8A0B19] cursor-pointer">
                                             <Trash className="size-5" />
                                         </button>
                                     </TableCell>

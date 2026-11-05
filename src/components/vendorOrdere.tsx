@@ -10,7 +10,7 @@ export default function VendorOrders() {
     Cancelled: "cancelled",
   } as const
   return (
-    <section className="xl:w-1/2 rounded-xl border border-[#7a3ffa1a] dark:bg-[#0E0B2F] bg-card p-5 shadow-sm">
+    <section className="xl:w-1/2 rounded-xl border border-[#7a3ffa1a] dark:bg-[#14162A] bg-card p-5 shadow-sm">
       <h2 className="mb-7 text-lg font-semibold">  {t("latestOrders")}</h2>
 
       <div className="w-full overflow-x-auto">
@@ -42,12 +42,12 @@ export default function VendorOrders() {
 
                 <td className="py-4 pl-4 text-center">
                   <span
-                    className={` rounded-lg px-3 py-2 text-sm font-semibold ${order.status === "Delivered" ? "bg-green-50 dark:bg-[#dbfce7a3] dark:text-green-900 text-green-700"
+                    className={` rounded-lg px-3 py-2 text-sm font-semibold ${order.status === "Delivered" ? "bg-green-50 dark:bg-[#39305D] px-4.5 dark:text-green-700 text-green-700"
                       : order.status === "Pending"
-                        ? "bg-[#F9F7FF] dark:bg-[#f1ebfeac] dark:text-[#6219d6] text-[#7B29FB] px-5"
+                        ? "bg-[#F9F7FF] dark:bg-[#39305D] dark:text-[#af8dfc] text-[#7B29FB] px-5"
                         : order.status === "Processing"
-                          ? "bg-blue-50 dark:bg-[#dbeafea6] dark:text-blue-900 text-[#031381]"
-                          : "bg-red-50 dark:bg-[#ffe2e29a] dark:text-red-900 text-red-700"
+                          ? "bg-blue-50 dark:bg-[#39305D] dark:text-blue-500 text-[#031381]"
+                          : "bg-red-50 px-4 dark:bg-[#39305D] dark:text-red-800 text-red-700"
                       }`}
                   >
                     {(() => {

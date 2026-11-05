@@ -11,6 +11,7 @@ import LanguageSwitch from "@/components/lang-switch"
 import { useLocale, useTranslations } from "next-intl"
 import { navigation } from "@/data/navigation"
 import { Link, usePathname } from "@/i18n/nav"
+import { Spinner } from "./ui/spinner"
 
 
 
@@ -33,7 +34,11 @@ export default function Header() {
 
 
     if (!mounted) {
-        return <p className="sm:p-8">Loading...</p>;
+         return (
+            <div className="flex min-h-screen items-center justify-center">
+                <Spinner className="size-10 text-purple-600" />
+            </div>
+        )
     }
 
     function handleLogout() {
@@ -47,13 +52,13 @@ export default function Header() {
 
         <>
             <header className="lg:hidden block">
-                <div className="flex items-center pl-8">
+                <div className={`flex items-center ${locale === "fa" ? "pr-8" : "pl-8"} `}>
                     <div>
                         <button onClick={() => setIsOpen(true)} className={`lg:hidden self-start p-2 rounded-md border ${locale === "fa" ? "right-4" : "left-4"}`}>
                             <Menu size={26} />
                         </button>
                     </div>
-                    <div className="h-20 flex justify-between items-center">
+                    <div className={`h-20 flex justify-between items-center ${locale === "fa" ? "pr-9.5" :""}`}>
                         <img src="/Logo.png" className=" w-50 dark:hidden" alt="Ecomrace" />
                         <img src="/vdark.png" className="hidden  w-40 dark:block brightness-125" alt="Ecomrace" />
                     </div>
@@ -125,14 +130,14 @@ export default function Header() {
 
                 </aside>
             </header>
-            <header className="w-5xl xl:w-full lg:flex hidden justify-between md:pr-7 sm:pl-4 border-b-2 border-[#7a3ffa2d] dark:border-[#7a3ffa51]">
-                <div className="h-20 flex justify-between items-center">
+            <header className={`w-5xl xl:w-full lg:flex hidden justify-between ${locale === "fa" ? " pl-7.5 pr-0" : " md:pr-7 dark:pl-0 sm:pl-3"}  border-b border-[#7a3ffa2d] dark:bg-[#14162a7a] dark:border-0`}>
+                <div className={`h-20 flex justify-end items-center dark:bg-[#14162A] ${locale === "fa" ? "pr-5.5 pl-18.5" : "pl-3 pr-21"}`}>
                     <img src="/Logo.png" className="md:h-20 w-40 dark:hidden" alt="Ecomrace" />
                     <img src="/vdark.png" className="hidden md:h-15 w-40 dark:block brightness-125" alt="Ecomrace" />
                 </div>
                 <div className="flex items-center gap-3">
                     <LanguageSwitch />
-                    <div className=" border-2 border-[#7a3ffa2d] hover:bg-[#8049FD] hover:text-white  dark:border-[#7a3ffaa0] flex items-center rounded-full p-1 cursor-pointer">
+                    <div className=" border-2 dark:border border-[#7a3ffa2d] hover:bg-[#8049FD] hover:text-white  dark:border-[#ae8dfc92] flex items-center rounded-full p-1.5 cursor-pointer">
                         <Theme />
                     </div>
                     <button onClick={handleLogout} className="flex items-center gap-1 cursor-pointer sm:text-base"><LogOut className="sm:size-5.5" /> {t("logout")}</button>

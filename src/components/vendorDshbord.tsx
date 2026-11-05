@@ -26,7 +26,7 @@ export default function VendorDashboard() {
         <p className="mt-2 text-lg "> Overview of the Store's Status </p>
       </div> */}
 
-      <div className="md:flex-row mx-5 flex flex-wrap xl:gap-0 gap-3 xl:justify-between md:justify-start  justify-center pb-2">
+      <div className="md:flex-row mx-5 flex flex-wrap xl:gap-0 gap-3 xl:justify-between md:justify-start  justify-center pb-5">
         {vendorDashboardCard.map((card) => (
           <DashboardCard
             key={card.title}

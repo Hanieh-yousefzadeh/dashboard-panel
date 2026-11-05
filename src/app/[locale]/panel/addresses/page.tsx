@@ -104,7 +104,7 @@ export default function MyAddressesPage() {
     function renderAddressForm(isEditing: boolean) {
         return (
             <form onSubmit={isEditing ? handleEditSubmit : handleSubmit}
-                className="flex flex-col gap-7 pt-5 text-[#6200ff] dark:border-[#b392fbab] dark:text-[#dbc8f9] dark:bg-[#0a0220]">
+                className="flex flex-col gap-7 pt-5 text-[#051164] dark:border-[#b392fbab] dark:text-[#dbc8f9] dark:bg-[#0B0E1A]">
                 <div className="flex flex-col gap-2">
                     <Label htmlFor="province">{t("province")}</Label>
                     <Input
@@ -113,7 +113,7 @@ export default function MyAddressesPage() {
                         onChange={(e) => setForm({ ...form, province: e.target.value })}
                         placeholder={t("enterProvince")}
                         required
-                        className="border-[#7a3ffa1a] h-10 focus-visible:ring-0 text-[#1e0547] dark:placeholder:text-[#b098d6bd] dark:text-[#bea2eba1]"
+                        className="border-[#7a3ffa1a] h-10 focus-visible:ring-0 text-[#051164] placeholder:text-[#05126463] dark:placeholder:text-[#b098d6bd] dark:text-[#bea2eba1]"
                     />
                 </div>
 
@@ -125,7 +125,7 @@ export default function MyAddressesPage() {
                         onChange={(e) => setForm({ ...form, city: e.target.value })}
                         placeholder={t("enterCity")}
                         required
-                        className="border-[#7a3ffa1a] h-10 focus-visible:ring-0 text-[#1e0547] dark:placeholder:text-[#b098d6bd] dark:text-[#bea2eba1]"
+                        className="border-[#7a3ffa1a] h-10 focus-visible:ring-0 text-[#051164] placeholder:text-[#05126463] dark:placeholder:text-[#b098d6bd] dark:text-[#bea2eba1]"
                     />
                 </div>
 
@@ -137,7 +137,7 @@ export default function MyAddressesPage() {
                         onChange={(e) => setForm({ ...form, address: e.target.value })}
                         placeholder={t("addressPlaceholder")}
                         required
-                        className="border-[#7a3ffa1a] h-10 focus-visible:ring-0 text-[#1e0547] dark:placeholder:text-[#b098d6bd] dark:text-[#bea2eba1]"
+                        className="border-[#7a3ffa1a] h-10 focus-visible:ring-0 text-[#051164] placeholder:text-[#05126463] dark:placeholder:text-[#b098d6bd] dark:text-[#bea2eba1]"
                     />
                 </div>
 
@@ -149,7 +149,7 @@ export default function MyAddressesPage() {
                         onChange={(e) => setForm({ ...form, plaque: e.target.value })}
                         placeholder={t("addressPlaceholder")}
                         required
-                        className="border-[#7a3ffa1a] h-10 dark:placeholder:text-[#b098d6bd] text-[#1e0547] dark:text-[#bea2eba1] focus-visible:ring-0"
+                        className="border-[#7a3ffa1a] h-10 dark:placeholder:text-[#b098d6bd] text-[#051164] placeholder:text-[#05126463] dark:text-[#bea2eba1] focus-visible:ring-0"
                     />
                 </div>
 
@@ -162,11 +162,11 @@ export default function MyAddressesPage() {
                         placeholder={t("postalCodePlaceholder")}
                         maxLength={10}
                         required
-                        className="border-[#7a3ffa1a] h-10 dark:placeholder:text-[#b098d6bd] text-[#1e0547] dark:text-[#bea2eba1] focus-visible:ring-0"
+                        className="border-[#7a3ffa1a] h-10 dark:placeholder:text-[#b098d6bd] text-[#051164] placeholder:text-[#05126463] dark:text-[#bea2eba1] focus-visible:ring-0"
                     />
                 </div>
 
-                <Button type="submit" className="w-full bg-[#7a3ffa] hover:bg-[#5409cd] py-5 mt-2 dark:text-[#d1ccd5] dark:bg-[#3b0b87]">
+                <Button type="submit" className="w-full bg-[#e1d4fe51] border-2  hover:border-[#5409cddb] border-[#b88ffa31] text-[#3b0b87] dark:bg-[#6A50B1] hover:bg-[#5409cd] hover:text-white py-5 mt-2 dark:text-white">
                     {isEditing ? "Save Changes" : "Add Address"}
                 </Button>
             </form>
@@ -193,16 +193,16 @@ export default function MyAddressesPage() {
                 >
                     <DialogTrigger
                         render={
-                            <Button className="bg-[#7a3ffacb] hover:bg-[#5409cd] cursor-pointer py-4.5 pr-3.5 dark:hover:text-[#d1ccd5] dark:bg-[#261666] dark:text-[#d1ccd5]">
+                            <Button className="bg-[#8C29FB] py-5 hover:bg-[#5409cd] cursor-pointer  pr-3.5  dark:bg-[#6A50B1] dark:text-white">
                                 <Plus strokeWidth={3} />
                                 {t("addAddress")}
                             </Button>
                         }
                     />
 
-                    <DialogContent className="border-[#7a3ffa1a] text-[#5409cd] dark:border-[#b392fbab] dark:text-[#dbc8f9] dark:bg-[#0a0220]">
+                    <DialogContent className="border-[#7a3ffa1a] text-[#051164] dark:border-[#b392fbab] dark:text-[#dbc8f9] dark:bg-[#0B0E1A]">
                         <DialogHeader>
-                            <DialogTitle className="font-bold text-[#5409cd] dark:text-[#d1ccd5] ">
+                            <DialogTitle className="font-bold text-[#051164] dark:text-[#d1ccd5] ">
                                 {t("addNewAddress")}
                             </DialogTitle>
                         </DialogHeader>
@@ -213,15 +213,15 @@ export default function MyAddressesPage() {
             </div>
 
             {mounted && (
-                <div className="rounded-md border-2 border-[#7a3ffa1a] dark:bg-[#0E0B2F]">
+                <div className="rounded-md border-2 border-[#7a3ffa1a] dark:bg-[#0B0E1A]">
                     <Table>
-                        <TableHeader className="h-15 text-lg bg-[#f1ebfe6a] dark:bg-[#7a3ffa23]">
+                        <TableHeader className="h-15 text-base bg-[#f1ebfe6a] dark:bg-[#6a50b11e]">
                             <TableRow className="hover:bg-transparent dark:hover:bg-transparent">
-                                <TableHead className={`font-semibold  text-[#5409cd] dark:text-[#bd8efb] ${locale === "fa" ? "text-right pr-12" : " xl:pl-12 pl-5"}`}>{t("provinceCity")}</TableHead>
-                                <TableHead className={`font-semibold  text-[#5409cd] dark:text-[#bd8efb] ${locale === "fa" ? "text-right" : ""}`}>{t("address")}</TableHead>
-                                <TableHead className={`font-semibold  text-[#5409cd] dark:text-[#bd8efb] ${locale === "fa" ? "text-right" : ""}`}>{t("plaque")}</TableHead>
-                                <TableHead className={`font-semibold  text-[#5409cd] dark:text-[#bd8efb] ${locale === "fa" ? "text-right" : ""}`}>{t("postalCode")}</TableHead>
-                                <TableHead className="text-center font-semibold text-[#5409cd] dark:text-[#bd8efb] ">{t("actions")}</TableHead>
+                                <TableHead className={`font-semibold  text-[#5409cd] dark:text-[#d7c7f9b8] ${locale === "fa" ? "text-right pr-12" : " xl:pl-12 pl-5"}`}>{t("provinceCity")}</TableHead>
+                                <TableHead className={`font-semibold  text-[#5409cd] dark:text-[#d7c7f9b8] ${locale === "fa" ? "text-right" : ""}`}>{t("address")}</TableHead>
+                                <TableHead className={`font-semibold  text-[#5409cd] dark:text-[#d7c7f9b8] ${locale === "fa" ? "text-right" : ""}`}>{t("plaque")}</TableHead>
+                                <TableHead className={`font-semibold  text-[#5409cd] dark:text-[#d7c7f9b8] ${locale === "fa" ? "text-right" : ""}`}>{t("postalCode")}</TableHead>
+                                <TableHead className="text-center font-semibold text-[#5409cd] dark:text-[#d7c7f9b8] ">{t("actions")}</TableHead>
                             </TableRow>
                         </TableHeader>
 
@@ -238,12 +238,12 @@ export default function MyAddressesPage() {
                                     <TableCell>
                                         <div className="flex items-center justify-center">
                                             <button onClick={() => handleEditClick(item)}
-                                                className="text-[#6e2dfab3] dark:text-[#6e2dfae0] cursor-pointer" >
+                                                className="text-[#6e2dfab3] dark:text-[#a286f0da] cursor-pointer" >
                                                 <PencilSparkles className="size-5" />
                                             </button>
 
                                             <button onClick={() => handleDeleteAddress(item.id)}
-                                                className="m-3 text-red-600 dark:text-red-900 cursor-pointer">
+                                                className="m-3 text-red-600 dark:text-[#8A0B19] cursor-pointer">
                                                 <Trash className="size-5" />
                                             </button>
                                         </div>
@@ -272,9 +272,9 @@ export default function MyAddressesPage() {
                     }
                 }}
             >
-                <DialogContent className="border-[#7a3ffa1a] text-[#5409cd] dark:text-[#dbc8f9] dark:bg-[#0a0220] ">
+                <DialogContent className="border-[#7a3ffa1a] text-[#5409cd] dark:text-[#dbc8f9] dark:bg-[#0B0E1A] ">
                     <DialogHeader>
-                        <DialogTitle className="font-bold text-[#5409cd] dark:text-[#d1ccd5]">
+                        <DialogTitle className="font-bold text-[#5409cd] dark:text-[#d1ccd5] ">
                             {t("editAddress")}
                         </DialogTitle>
                     </DialogHeader>
