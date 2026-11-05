@@ -35,7 +35,7 @@ export default function VisitPage() {
         }
     })
     return (
-        <div className={`${locale === "fa" ? "pr-6" : "xl:pl-6 px-5 "} py-8  xl:w-312 md:w-3xl w-80 overflow-x-atuo`}>
+        <div className={`${locale === "fa" ? "pr-6" : "xl:pl-7 px-5 "} py-8  xl:w-318 md:w-3xl w-80 overflow-x-atuo`}>
             <div className="rounded-md border-2 border-[#7a3ffa1a] dark:bg-[#0B0E1A]">
                 <Table>
                     <TableHeader className="h-15 text-base bg-[#f1ebfe6a] dark:bg-[#6a50b11e]">
